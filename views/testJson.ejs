@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TestJson</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Prueba a la llamada a JQuery</h1>
+    <script>
+        $.ajax({
+            url: 'http://localhost:3000/personJson',
+            type: 'POST', 
+            dataType: 'json',
+            data: JSON.stringify({
+                nombre: 'Luis',
+                apellido: 'Nava'
+            }),
+            contentType: 'application/json' 
+        });
+    </script>
+</body>
+
+</html>
